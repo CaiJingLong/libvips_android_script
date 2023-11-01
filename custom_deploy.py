@@ -40,8 +40,11 @@ def deploy(graph, output_folder):
         folder_name = output_folder
         build_type = dep.info.settings.get_safe("build_type")
         arch = dep.info.settings.get_safe("arch")
+        setting_os = dep.info.settings.get_safe("os")
         if build_type:
             folder_name = os.path.join(folder_name, build_type)
+        if setting_os:
+            folder_name = os.path.join(folder_name, setting_os)
         if arch:
             folder_name = os.path.join(folder_name, arch)
         copy_with_cmd('mkdir -p %s' % folder_name)

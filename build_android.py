@@ -38,7 +38,7 @@ jni_folder_map = {
 
 
 def get_release_folder(type: str) -> str:
-    return join(script_dir, 'output', 'Release', type_map[type])
+    return join(script_dir, 'output', 'Release', 'Android', type_map[type])
 
 
 def get_jniLibs_path(type: str) -> str:

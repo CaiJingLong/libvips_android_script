@@ -1,10 +1,4 @@
-import os
-
 from conan import ConanFile
-from conan.tools.cmake import CMakeToolchain, CMake, cmake_layout
-from conan.tools.meson.toolchain import MesonToolchain
-from conan.tools.scm import Git
-from conan.tools.build import check_min_cppstd
 
 
 class DepLibVips(ConanFile):
